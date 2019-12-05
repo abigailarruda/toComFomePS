@@ -4,6 +4,7 @@ import { Inject, Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { UserViewModel } from "src/app/viewModels/user.viewModel";
 import { VmToModelService } from "./vmToModel.service";
+import { User } from "../models/user.models";
 @Injectable()
 export class SigInService implements ISignInService {
   constructor(
@@ -18,7 +19,9 @@ export class SigInService implements ISignInService {
   }
 
   UpdatetUserOnline(user: UserViewModel, key: string) {
-    var entny = this.convertService.userViewModelToUser(user);
+    var entny = new User();
+    entny.name = user.name;
+    entny.chave = user.chave;
     return this.siginRepository.UpdatetUserOnline(entny, key);
   }
 

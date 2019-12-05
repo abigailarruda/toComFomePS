@@ -37,7 +37,7 @@ export class ProfileComponent implements OnInit, AfterViewInit {
       online[0];
       this.userService.get().subscribe(res => {
         this.users = res;
-        this.userLogado = res.find(x => x.key === online[0].key);
+        this.userLogado = res.find(x => x.key === online[0].chave);
         this.form.pais.setValue(this.userLogado.country);
         this.form.email.setValue(this.userLogado.email);
         this.form.senha.setValue(this.userLogado.password);

@@ -1,7 +1,8 @@
-import { Person } from './person.models';
+import { Person } from "./person.models";
 
-export class User extends Person{
-    username : string;
-    status : boolean;
-    country : string;
+export class User extends Person {
+  username: string;
+  status: boolean;
+  country: string;
+  chave: string;
 }

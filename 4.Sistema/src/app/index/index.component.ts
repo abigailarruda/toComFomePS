@@ -19,6 +19,7 @@ export class IndexComponent implements OnInit, AfterViewInit {
   public recipeFilter = new Array<RecipeViewModel>();
   public ingredientsFilter = new Array<IngredientViewModel>();
   public filter: string;
+  public cont: number = 0;
   flagRecipes: boolean = false;
   constructor(
     @Inject("IIndexService") private indexService: IIndexService,
@@ -29,10 +30,13 @@ export class IndexComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {}
 
   ngOnInit(): void {
-    this.userService.getUserOnline().subscribe(res => {
-      this.getUsers(res[0].key);
-      this.getIngredients();
-    });
+    if (this.cont == 0) {
+      this.cont++;
+      this.userService.getUserOnline().subscribe(res => {
+        this.getUsers(res[0].chave);
+        this.getIngredients();
+      });
+    }
   }
 
   getIngredients() {
