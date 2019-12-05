@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tô Com Fome | Criar Conta</title>
+  </head>
+
+  <body class="text-center">
+    <div class="container-fluid">
+      <div class="form-signup">
+          <form  name="formulario"
+          [formGroup]="formulario">
+          <ngb-alert type="danger" *ngIf="erro" (close)="limparAlerta()" [dismissible]="true">{{ erro }}</ngb-alert>
+            <div style="padding-bottom: 2%;padding-top: 5%">
+              <input
+              style="padding-bottom: 2%;padding-top: 2%;"
+                type="text"
+                class="mt-3 form-control"
+                placeholder="Nome"
+                required
+                formControlName="nome"
+                [ngClass]="{ 'is-invalid': submitted && form.nome.errors }"
+              />
+            </div>
+            <div style="padding-bottom: 2%;">
+              <input
+              style="padding-bottom: 2%;padding-top: 2%;"
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              autofocus
+              formControlName="email"
+              [ngClass]="{ 'is-invalid': submitted && form.email.errors }"
+            />
+            </div>
+            <div style="padding-bottom: 2%;">
+              <input
+              style="padding-bottom: 2%;padding-top: 2%;"
+              type="password"
+              class="form-control"
+              placeholder="Senha"
+              formControlName="senha"
+              [ngClass]="{ 'is-invalid': submitted && form.senha.errors }"
+            />
+            </div>
+            <div style="padding-bottom: 2%;">
+              <input type="text" class="form-control" placeholder="Data de Nascimento"
+              formControlName="data" mask="00/00/0000" style="padding-bottom: 2%;padding-top: 2%;"
+             [ngClass]="{ 'is-invalid': submitted && form.data.errors}">
+            </div>
+            <div style="padding-bottom: 2%;">
+              <input
+              style="padding-bottom: 2%;padding-top: 2%;"
+                type="text"
+                class="form-control"
+                placeholder="Usuário"
+                formControlName="usuario"
+                [ngClass]="{ 'is-invalid': submitted && form.usuario.errors }"
+              />
+            </div>
+          </form>
+            <div style="padding-bottom: 2%;">
+              <ng-select style="font-size: 18px;color:rgba(0, 0, 0, 0.6)" [(ngModel)] = "paisSelecionado"  [items] = "paises"  placeholder="País"
+              [ngClass]="{ 'is-invalid': submitted && form.pais.errors }">
+              </ng-select>
+            </div>
+            <button (click) = "salvar()"s class="btn btn-lg btn-primary btn-block" type="submit">
+                Criar conta
+              </button>
+              <p class="mt-3 mb-3 text-muted">
+                © 2019 Tô Com Fome - Todos os direitos reservados.
+              </p>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(".dropdown-toggle").dropdown();
+      $(".dropdown-menu a.dropdown-item").on("click", function() {
+        $("#inputCountry").html($(this).text());
+      });
+    </script>
+  </body>
+</html>

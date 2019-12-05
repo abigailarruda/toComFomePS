@@ -1,0 +1,209 @@
+.fas.fa-utensils {
+  color: #ea2027;
+  font-size: 40px !important;
+}
+
+html,
+body {
+  height: 100vh!important;
+}
+
+body {
+  font-family: "Cabin", sans-serif !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #ea2027;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 4px !important;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+h1.h3.mb-3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.custom-control-input:active ~ .custom-control-label::before {
+  box-shadow: none !important;
+  background-color: #ffffff !important;
+  border: 2px solid #ea2027 !important;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none !important;
+  border: 2px solid #ea2027 !important;
+}
+
+.custom-control-label:before {
+  background-color: #ffffff;
+  border: 2px solid #ea2027;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #ea2027;
+  border: 2px solid #ea2027;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 0;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.text-muted {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.form-control:focus {
+  font-size: 18px !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  background-color: #fff;
+  border-color: #e6e6e6;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.form-control {
+  font-size: 18px !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid #e6e6e6;
+}
+
+input {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-size: 18px !important;
+}
+
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-size: 18px !important;
+}
+
+::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-size: 18px !important;
+}
+
+.btn.btn-primary,
+.btn.btn-primary:active,
+.btn.btn-primary:not(:disabled):not(.disabled):active {
+  text-transform: none !important;
+  background: #ea2027;
+  border-color: #e2181f !important;
+  box-shadow: none !important;
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  font-size: 18px !important;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+}
+
+.btn.btn-primary a,
+.btn.btn-primary:active a,
+.btn.btn-primary:not(:disabled):not(.disabled):active a {
+  text-decoration: none !important;
+  text-transform: none !important;
+  background: #ea2027;
+  border-color: #e2181f !important;
+  box-shadow: none !important;
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  font-size: 18px !important;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+}
+
+.btn.btn-primary:hover {
+  background: #ea2027;
+  color: #ffffff;
+  border-color: #e2181f !important;
+}
+
+.mt-4.text-muted a,
+.mt-4.text-muted a:hover {
+  text-decoration: none !important;
+  color: #ea2027;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-track {
+  border: none;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border: none;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border: none;
+  background: transparent;
+}
+
+::selection {
+  background-color: #ea2027;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #ea2027;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+::-webkit-scrollbar-track {
+	border: none;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	border: none;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	border: none;
+	background: transparent;
+}

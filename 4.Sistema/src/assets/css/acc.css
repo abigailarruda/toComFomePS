@@ -1,0 +1,117 @@
+.fas.fa-sign-out-alt {
+	padding-right: 10px !important;
+}
+
+.profile-jumbotron {
+	background: #FFFFFF;
+	border: none !important;
+}
+
+.card-img.profile {
+	border-bottom-right-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+}
+
+.form-control {
+	color: rgba(0, 0, 0, 0.6) !important;
+	background-color: #FFFFFF !important;
+	border: 1px solid #e6e6e6 !important;
+	font-size: 16px !important;
+}
+
+.form-control:focus {
+	color: rgba(0, 0, 0, 0.6) !important;
+	background-color: #FFFFFF !important;
+	border: 1px solid #e6e6e6 !important;
+	outline: none !important;
+	box-shadow: none !important;
+	font-size: 16px !important;
+}
+
+input {
+	color: rgba(0, 0, 0, 0.6) !important;
+}
+
+::placeholder {
+	color: rgba(0, 0, 0, 0.6) !important;
+	font-size: 16px !important;
+}
+
+:-ms-input-placeholder {
+	color: rgba(0, 0, 0, 0.6) !important;
+	font-size: 16px !important;
+}
+
+::-ms-input-placeholder {
+	color: rgba(0, 0, 0, 0.6) !important;
+	font-size: 16px !important;
+}
+
+label {
+	font-size: 16px !important;
+	color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.dropdown .btn.btn-secondary.dropdown-toggle,
+.dropdown-menu {
+	width: 100% !important;
+}
+
+.btn.btn-primary.submit,
+.btn.btn-primary.submit:active,
+.btn.btn-primary.submit:not(:disabled):not(.disabled):active {
+	text-decoration: none !important;
+	text-transform: none !important;
+	background: #EA2027 !important;
+	border-color: #E2181F !important;
+	box-shadow: none !important;
+	font-family: "Cabin", sans-serif;
+	font-weight: normal !important;
+	font-size: 18px !important;
+	letter-spacing: 0.3px;
+	color: #FFFFFF !important;
+	padding: 8px;
+	margin: 0px 16px;
+}
+
+.btn.btn-primary.submit:hover {
+	background: #EA2027 !important;
+	color: #FFFFFF !important;
+	border-color: #E2181F !important;
+}
+
+.btn.btn-primary.submit a,
+.btn.btn-primary.submit:active a,
+.btn.btn-primary.submit:not(:disabled):not(.disabled):active a {
+	text-decoration: none !important;
+	text-transform: none !important;
+	background: #EA2027 !important;
+	border-color: #E2181F !important;
+	box-shadow: none !important;
+	font-family: "Cabin", sans-serif;
+	font-weight: normal !important;
+	font-size: 18px !important;
+	letter-spacing: 0.3px;
+	color: #FFFFFF !important;
+}
+
+.btn.btn-primary.submit:hover a {
+	background: #EA2027 !important;
+	color: #FFFFFF !important;
+	border-color: #E2181F !important;
+}
+
+.btn.btn-secondary.dropdown-toggle {
+	text-align: left !important;
+	color: rgba(0, 0, 0, 0.6) !important;
+	background-color: #FFFFFF !important;
+	border: 1px solid #e6e6e6 !important;
+	font-size: 16px !important;
+}
+
+.btn.btn-secondary.dropdown-toggle:focus {
+	background-color: #FFFFFF !important;
+	border: 1px solid #e6e6e6 !important;
+	outline: none !important;
+	box-shadow: none !important;
+}

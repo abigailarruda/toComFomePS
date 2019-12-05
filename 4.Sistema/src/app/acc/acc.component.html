@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tô Com Fome | Minha Conta</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" [routerLink]="['/index']"
+          ><span class="icon-brand"><i class="fas fa-utensils"></i></span> Tô
+          Com Fome</a
+        >
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse align-right"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav flex-row ml-auto justify-content-around">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/index']">Início</a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-primary login my-2 my-sm-0 nav-active">
+                <a [routerLink]="['/']"
+                  ><i class="fas fa-sign-out-alt"></i>Sair<span class="sr-only"
+                    >(current)</span
+                  ></a
+                >
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="container mt-4 mb-5">
+      <div class="row">
+        <div
+          class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-lg-auto mb-md-auto mb-3"
+        >
+          <div class="mb-3 d-flex align-items-center ">
+            <div class="card mb-3" style="min-width: 100%;">
+              <div class="row no-gutters">
+                <div class="col-4">
+                  <img
+                    src="../../assets/img/8.png"
+                    class="card-img profile img-fluid"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ form.nome.value }}</h5>
+                    <p class="card-text">
+                      <i class="fas fa-at pr-1"></i> {{ form.usuario.value }}
+                      <br />
+                      <i class="fas fa-map-marker-alt pr-2"></i>
+                      {{ form.pais.value }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-xs-12 col-sm-12 col-md-8 col-lg-8 mb-lg-auto mb-md-auto mb-3"
+        >
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="card p-4">
+                <form
+                  *ngIf="users.length > 0"
+                  class="p-2"
+                  name="formulario"
+                  [formGroup]="formulario"
+                >
+                  <ngb-alert
+                    type="success"
+                    *ngIf="mensagem"
+                    (close)="limparAlerta()"
+                    [dismissible]="true"
+                    >{{ mensagem }}</ngb-alert
+                  >
+                  <div class="form-group row mb-2">
+                    <label
+                      for="nome"
+                      class="col-xs-12 col-sm-12 col-md-2 col-lg-2 mb-1 mt-1 p-1"
+                      >Nome</label
+                    >
+                    <input
+                      type="text"
+                      class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-control"
+                      placeholder="Nome. Ex.: Gordon Ramsay"
+                      formControlName="nome"
+                      [ngClass]="{
+                        'is-invalid': submitted && form.nome.errors
+                      }"
+                      required
+                    />
+                  </div>
+                  <div class="form-group row mb-2">
+                    <label
+                      for="email"
+                      class="col-xs-12 col-sm-12 col-md-2 col-lg-2 mb-1 mt-1 p-1"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-control"
+                      placeholder="Email. Ex.: gordon@ramsay.com"
+                      formControlName="email"
+                      [ngClass]="{
+                        'is-invalid': submitted && form.email.errors
+                      }"
+                    />
+                  </div>
+                  <div class="form-group row mb-2">
+                    <label
+                      for="senha"
+                      class="col-xs-12 col-sm-12 col-md-2 col-lg-2 mb-1 mt-1 p-1"
+                      >Senha</label
+                    >
+                    <input
+                      type="text"
+                      class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-control"
+                      placeholder="Senha."
+                      formControlName="senha"
+                      [ngClass]="{
+                        'is-invalid': submitted && form.senha.errors
+                      }"
+                    />
+                  </div>
+                  <div class="form-group row mb-2">
+                    <label
+                      for="datanasc"
+                      class="col-xs-12 col-sm-12 col-md-2 col-lg-2 mb-1 mt-1 p-1"
+                      >Data</label
+                    >
+                    <input
+                      type="text"
+                      class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-control"
+                      placeholder="Data de Nascimento"
+                      formControlName="data"
+                      mask="00/00/0000"
+                      [ngClass]="{
+                        'is-invalid': submitted && form.data.errors
+                      }"
+                    />
+                  </div>
+                  <div class="row mb-2">
+                    <label
+                      for="pais"
+                      class="col-xs-12 col-sm-12 col-md-2 col-lg-2 mb-1 mt-1 p-1"
+                      >País</label
+                    >
+                    <div
+                      class="dropdown col-xs-12 col-sm-12 col-md-10 col-lg-10 p-0"
+                    >
+                      <ng-select
+                        style="font-size: 18px;color:rgba(0, 0, 0, 0.6)"
+                        formControlName="pais"
+                        [items]="paises"
+                        placeholder="País"
+                        [ngClass]="{
+                          'is-invalid': submitted && form.pais.errors
+                        }"
+                      >
+                      </ng-select>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-2">
+                    <label
+                      for="username"
+                      class="col-xs-12 col-sm-12 col-md-2 col-lg-2 mb-1 mt-1 p-1"
+                      >Usuário</label
+                    >
+                    <input
+                      type="text"
+                      class="col-xs-12 col-sm-12 col-md-10 col-lg-10 form-control"
+                      placeholder="Usuário. Ex.: gordonramsay"
+                      formControlName="usuario"
+                      [ngClass]="{
+                        'is-invalid': submitted && form.usuario.errors
+                      }"
+                    />
+                  </div>
+                  <div
+                    class="d-flex justify-content-center align-items-center mt-4"
+                  >
+                    <button
+                      (click)="salvar()"
+                      type="submit"
+                      class="btn btn-primary submit"
+                    >
+                      Salvar
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="mt-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <p class="text-center m-0 p-4">
+              © 2019 Tô Com Fome - Todos os direitos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(".dropdown-toggle").dropdown();
+      $(".dropdown-menu a.dropdown-item").on("click", function() {
+        $("#pais").html($(this).text());
+      });
+    </script>
+  </body>
+</html>
