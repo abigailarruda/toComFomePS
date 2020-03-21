@@ -13,7 +13,7 @@
 
 ### PS-ES-2019-2-ToComFome
 
-O Tô Com Fome é um projeto desenvolvido como atividade supervisionada da disciplina Projeto de Software, ministrada pelo professor [Rubens de Castro Pereira](https://github.com/rubenscp) à turma de Engenharia de Software (2019/2). Os membros do projeto são: [Abigail](https://github.com/abigailarruda), [Jacob](https://github.com/JacobFerraz) e [Victor](https://github.com/victormlb06).
+O **Tô Com Fome** é um projeto desenvolvido como atividade supervisionada da disciplina Projeto de Software, ministrada pelo professor [Rubens de Castro Pereira](https://github.com/rubenscp) à turma de Engenharia de Software (2019/2). Os membros do projeto são: [Abigail](https://github.com/abigailarruda), [Jacob](https://github.com/JacobFerraz) e [Victor](https://github.com/victormlb06).
 
 ## 🥪 Tecnologias
 
